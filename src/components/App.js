@@ -40,8 +40,8 @@ const App = () => {
     {
       setMovieList(data[selected]);
     }
-
-    console.log(movielist)
+    else
+    setSelected(null)
   }
 
   React.useEffect(() => {
@@ -64,7 +64,7 @@ const App = () => {
         (<p>No year Selected</p>)}
         </div>
         <ul>
-          {movielist.map((movie,index)=>(
+          {movielist&&movielist.map((movie,index)=>(
             <li key={index}>{movie}</li>
           ))}
         </ul>
